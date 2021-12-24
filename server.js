@@ -5,6 +5,7 @@ const path=require('path');
 const app=express();
 const mongoose=require('mongoose');
 
+app.use(express.json());
 let username=process.env.USERNAME;
 let password=process.env.PASSWORD;
 let mongoURL=`mongodb+srv://${username}:${password}@cluster0.lzuaa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
@@ -20,7 +21,7 @@ mongoose.connect(mongoURL)
     });
 
 
-app.use('/api/user', usersRouter)
+app.use('/api/users', usersRouter)
 
 const port=process.env.PORT || 3001;
 app.listen(port, ()=>{
