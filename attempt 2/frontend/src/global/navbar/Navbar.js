@@ -5,14 +5,13 @@ import CartIcon from './CartIcon.svg';
 
 function Navbar(props) {
     return (
-        <nav className='navbar'>
+        <nav className='w-full bg-gray-400 flex'>
             <Link to='/'>
-                <img src={logo} alt="logo" height='40' />
+                <img src={logo} alt="logo" className='h-12' />
             </Link>
             <Link to='/cart'>
-                <img src={CartIcon} alt="Cart icon" />
+                <img src={CartIcon} alt="Cart icon" className='h-12' />
             </Link>
-            <h2>Dev Merch</h2>
         </nav>
     );
 }

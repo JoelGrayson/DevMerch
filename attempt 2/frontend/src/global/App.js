@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from '../home/Home';
 import Product from '../product/Product';
 import Cart from '../cart/Cart';
+import './import tailwind.css';
 
 function App() {
   return (
