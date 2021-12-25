@@ -6,3 +6,26 @@ Content-Type: application/json
     "email": "thejoelgrayson@gmail.com",
     "password": "password"
 }
+
+
+###
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+
+{
+    "username": "JoelGrayson2",
+    "email": "joel@joelgrayson.com",
+    "password": "password2"
+}
+
+
+###
+
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "JoelGrayson2",
+    "password": "password2"
+}
