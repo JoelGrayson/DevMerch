@@ -1,0 +1,1 @@
+Each folder is a page or global

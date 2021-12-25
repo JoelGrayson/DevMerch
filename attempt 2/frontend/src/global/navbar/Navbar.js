@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../logo/circle.png';
 import {Link} from 'react-router-dom';
 import CartIcon from './CartIcon.svg';
-import './style.css';
 
 function Navbar(props) {
     return (

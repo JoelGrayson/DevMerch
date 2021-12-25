@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.j_header-btn {
+    @apply flex items-center border-solid border-2 border-black rounded-xl px-3 bg-[#8228BD] hover:bg-[#b025b1];
+}
+
+h1 {
+    @apply text-5xl;
+}
+h2 {
+    @apply text-2xl;
+}
+h3 {
+    @apply text-xl;
+}
+button {
+    @apply bg-blue-500 p-2 rounded-lg text-white;
+}
