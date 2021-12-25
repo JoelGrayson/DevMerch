@@ -1,0 +1,1 @@
+Developer merch is an online store where you can buy stickers of your favorite technologies.
