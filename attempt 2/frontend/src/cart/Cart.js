@@ -1,16 +1,22 @@
 import React from 'react'
 import CartItem from './component/CartItem';
 
+import {addToCart, removeFromCart, readCart} from '../addToCart/functions';
+
 function Cart() {
+    let cartItems=readCart();
+
     return (
         <div className="max-w-[1500px] mx-auto my-6">
             <h1 className='text-center'>Shopping Cart</h1>
             <main className='flex max-w-[1500px] mx-auto justify-around'>
                 <div id='cart-left'>
-                    <CartItem />
-                    <CartItem />
-                    <CartItem />
-                    <CartItem />
+                    {console.log(readCart()) /*log cartItems*/}
+                    {
+                        cartItems.map(cartItem=>{
+                            return <CartItem itemDetails={cartItem} key={cartItem.id} />;
+                        })
+                    }
                 </div>
                 <div id='cart-right' className='border-solid border-2 border-gray-300 p-5 rounded-xl shadow-xl h-fit'>
                     <p>Subtotal of 2 items</p>
