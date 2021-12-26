@@ -5,7 +5,8 @@ import './CartItem.css';
 import {removeFromCart, changeQuantity} from '../../addToCart/functions';
 
 function CartItem(props) {
-    let {id, ogQuantity}=props.itemDetails; //only includes id & quantity
+    let {id, quantity: ogQuantity}=props.itemDetails; //only includes id & quantity
+    console.log({id, ogQuantity, props: props.itemDetails})
     let [quantity, setQuantity]=useState(ogQuantity);
     //fetch product details
     
@@ -19,12 +20,10 @@ function CartItem(props) {
         })
     }, [id]); //no dependencies
 
-
-    
     let defaultProductImageUrl=`https://i.ibb.co/VT68gRW/Vector-graphic-of-no-thumbnail-symbol.jpg`;
 
     function setNewValue(newQuantity) {
-        changeQuantity(newQuantity); //change actual value
+        changeQuantity(id, newQuantity); //change actual value
         setQuantity(newQuantity); //updates virtual dom
     }
 
@@ -40,6 +39,7 @@ function CartItem(props) {
             </Link>
             <div className='quantity'>
                 <span>Quantity: </span>
+                {console.log({ogQuantity,quantity})}
                 <select className='border-solid border-[1.5px] border-blue-800 rounded-md h-8' value={quantity} onChange={e=>setNewValue(e.target.value)}>
                     <option value="1">1</option>
                     <option value="2">2</option>
