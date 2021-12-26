@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import CartItem from './component/CartItem';
+import {CircularProgress} from '@mui/material';
 
 import { readCart} from '../addToCart/functions';
 
@@ -43,6 +44,7 @@ function Cart() {
                 </div>
                 <div id='cart-right' className='border-solid border-2 border-gray-300 p-5 rounded-xl shadow-xl h-fit'>
                     <p>Subtotal of {cartItems.length} items</p>
+                    <p className='border-b-2 border-b-solid border-b-gray-300 pb-2 mb-4'>{totalPrice==='calculating'?<CircularProgress style={{zoom: 0.6}} />:`$${totalPrice}`}</p>
                     <button>Proceed to checkout</button>
                 </div>
             </main>
