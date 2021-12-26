@@ -34,8 +34,12 @@ function Product() {
     }
     useEffect(() => {
         getProductById(idFromParams);
-    }, []);
+    }, [idFromParams]);
 
+    function addToCartButtonClick() {
+        addToCart(product._id, quantity);
+        window.location.href='/cart';
+    }
 
     return (<>
         {
@@ -62,21 +66,10 @@ function Product() {
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <button onClick={_=>{addToCart(product._id, quantity)}}>Add to cart</button>
+                    <button onClick={addToCartButtonClick}>Add to cart</button>
                 </div>
             </div>
         }</>);
 }
-
-function PageLoading() {
-    return (<h2>Loading...</h2>);
-}
-function PageNotFound() {
-    return (<div>
-        <div>Page not found</div>
-        <button>Return home</button>
-    </div>);
-}
-
 
 export default Product;

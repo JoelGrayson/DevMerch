@@ -35,9 +35,13 @@ function Cart() {
                     {
                         cartItems.length>0 //Item
                         ?
-                        cartItems.map(cartItem=>{
-                            return <CartItem itemDetails={cartItem} key={cartItem.id} />;
-                        })
+                        //If items, display items and message to continue shopping
+                        (<>
+                            {cartItems.map(cartItem=>{
+                                return <CartItem itemDetails={cartItem} key={cartItem.id} />;
+                            })}
+                            <a href='/' className='underline text-blue-700'>Continue shopping</a>
+                        </>)
                         : //If no items, show message below
                         <p>No items in cart. <a href='/' className='underline text-blue-700'>Add one from the shopping page</a>.</p>
                     }
