@@ -1,4 +1,4 @@
-function addToCart(id, quantity) {
+function addToCart(id, quantity) { //adds, not overrides
     let storageId=`cartItem:${id}`;
     if (localStorage.getItem(storageId)==null) { //not previously defined
         console.log(`Adding ${id} qty ${quantity}`);
@@ -9,6 +9,11 @@ function addToCart(id, quantity) {
         console.log(`Adding ${quantity} to ${id}`, {id, prevQuantity, newQuantity})
         localStorage.setItem(storageId, newQuantity);
     }
+}
+
+function changeQuantity(id, newQuantity) { //overrides, not adds
+    let storageId=`cartItem:${id}`;
+    localStorage.setItem(storageId, newQuantity);
 }
 
 function removeFromCart(id) {
@@ -35,6 +40,7 @@ function readCart() {
 
 module.exports={
     addToCart,
+    changeQuantity,
     removeFromCart,
     readCart
 }

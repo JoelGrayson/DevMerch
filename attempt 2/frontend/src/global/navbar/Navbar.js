@@ -1,9 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // import logo from '../logo/circle.png';
 import {Link} from 'react-router-dom';
 import CartIcon from './CartIcon.svg';
 
+import {readCart} from '../../addToCart/functions';
+
 function Navbar(props) {
+    
+    let [numCartItems, setNumCartItems] = useState(null);
+    
+    useEffect(_=>{
+        getNumItems();
+    }, []);
+
+    async function getNumItems() {
+        let cartItems=await readCart();
+        let length=cartItems.length;
+        setNumCartItems(length);
+        return length;
+    }
+
     return (
         <nav className='w-full bg-gradient-to-br from-[#9663c9] to-[#476dc1] flex justify-between items-center p-3 text-[#9CE2F9]'>
             <div> {/* Left side */}
@@ -17,7 +33,9 @@ function Navbar(props) {
                 </Link>
                 <Link to='/cart' className='j_header-btn'>
                     <img src={CartIcon} alt="Cart icon" className='h-12' />
-                    <p>Cart <span id='cartCount' className='rounded-full px-2 py-1 border-solid border-black border-2'>0</span></p>
+                    <p>Cart 
+                        {numCartItems && <span id='cartCount' className='rounded-full px-2 py-1 border-solid border-black border-2'>{numCartItems}</span>}
+                    </p>
                 </Link>
             </div>
         </nav>

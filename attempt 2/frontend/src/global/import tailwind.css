@@ -18,3 +18,7 @@ h3 {
 button {
     @apply bg-blue-500 p-2 rounded-lg text-white;
 }
+button:hover {
+    transition: background-color 0.3s;
+    @apply bg-blue-600;
+}

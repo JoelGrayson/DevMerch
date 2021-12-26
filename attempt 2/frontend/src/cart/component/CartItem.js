@@ -1,40 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom';
-import product from '../../home/component/Product';
 import './CartItem.css';
 
-import {removeFromCart} from '../../addToCart/functions';
+import {removeFromCart, changeQuantity} from '../../addToCart/functions';
 
 function CartItem(props) {
-
     let {id, ogQuantity}=props.itemDetails; //only includes id & quantity
     let [quantity, setQuantity]=useState(ogQuantity);
     //fetch product details
-
+    
     let [productDetails, setProductDetails]=useState({});
-    useEffect(_=>{
-        getProductDetails();
-    }, []); //no dependencies
 
-    async function getProductDetails() {
-        console.log(`http://localhost:1028/api/products/${id}`);
-        let response=await fetch(`http://localhost:1028/api/products/${id}`)
-        let json=await response.json();
-        setProductDetails(json);
-    }
+    useEffect(_=>{
+        fetch(`http://localhost:1028/api/products/${id}`)
+        .then(res=>res.json())
+        .then(json=>{
+            setProductDetails(json);
+        })
+    }, [id]); //no dependencies
+
+
     
     let defaultProductImageUrl=`https://i.ibb.co/VT68gRW/Vector-graphic-of-no-thumbnail-symbol.jpg`;
 
     function setNewValue(newQuantity) {
-        setQuantity(newQuantity);
+        changeQuantity(newQuantity); //change actual value
+        setQuantity(newQuantity); //updates virtual dom
     }
+
+    let productLink=`/product/${productDetails._id}`;
     
     return (
         <div className='cartItem flex items-center border-solid border-2 border-black rounded-lg p-3 my-5'>
-            <Link to={`/product/${111}`}>
+            <Link to={productLink}>
                 <img className='w-20 pr-5' src={productDetails.imageUrl || defaultProductImageUrl} alt="Product" />
             </Link>
-            <Link to={`/product/${111}`}>
+            <Link to={productLink}>
                 <p>{(productDetails.hasOwnProperty('name') ? productDetails.name : 'Loading...')}</p>
             </Link>
             <div className='quantity'>
@@ -52,7 +53,7 @@ function CartItem(props) {
                     <option value="10">10</option>
                 </select>
             </div>
-            <button className='delete bg-red-500' onClick={_=>removeFromCart(id)}>
+            <button className='delete bg-red-500 hover:bg-red-600' onClick={_=>removeFromCart(id)}>
                 <i className='fas fa-trash'></i>
             </button>
         </div>

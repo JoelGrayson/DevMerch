@@ -1,7 +1,7 @@
 import React from 'react'
 import CartItem from './component/CartItem';
 
-import {addToCart, removeFromCart, readCart} from '../addToCart/functions';
+import { readCart} from '../addToCart/functions';
 
 function Cart() {
     let cartItems=readCart();
@@ -13,9 +13,13 @@ function Cart() {
                 <div id='cart-left'>
                     {console.log(readCart()) /*log cartItems*/}
                     {
+                        cartItems.length>0 //Item
+                        ?
                         cartItems.map(cartItem=>{
                             return <CartItem itemDetails={cartItem} key={cartItem.id} />;
                         })
+                        : //If no items, show message below
+                        <p>No items in cart. <a href='/' className='underline text-blue-700'>Add one from the shopping page</a>.</p>
                     }
                 </div>
                 <div id='cart-right' className='border-solid border-2 border-gray-300 p-5 rounded-xl shadow-xl h-fit'>
