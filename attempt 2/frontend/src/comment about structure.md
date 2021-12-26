@@ -1,1 +1,3 @@
-Each folder is a page or global
+Each folder is either
+* global (on every page)
+* a page

@@ -13,7 +13,7 @@ function Product() {
                 <p id="product-description">Product description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium voluptate doloribus vel eaque a amet veniam repudiandae at facilis eum aliquid doloremque quo voluptatem, iste molestiae asperiores quisquam, aspernatur officiis voluptatibus porro minus nobis. Numquam saepe magnam exercitationem iste. Obcaecati aspernatur minima saepe incidunt est, sapiente illum voluptas corporis?</p>
             </div>
             <div className='product-right rounded-xl border-solid border-gray-400 border-2 shadow-lg w-[20%] p-6'> {/* Right (add to cart) */}
-                <div className="choose-size flex leading-[4] flex items-center">
+                <div className="choose-size flex leading-[4] items-center">
                     <p>Quantity &emsp;</p>
                     <select className='border-solid border-2 border-blue-800 rounded-xl h-8'>
                         <option value="1">1</option>
