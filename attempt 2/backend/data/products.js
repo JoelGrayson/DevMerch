@@ -29,7 +29,7 @@ module.exports = [
     {
         name: 'MongoDB',
         imageUrl:
-            'https://i.ibb.co/Xzpkw4T/mongodb-logo.png            ',
+            'https://i.ibb.co/Xzpkw4T/mongodb-logo.png',
         description:
             'Get developer style at with the MongoDB sticker.',
         price: 50,

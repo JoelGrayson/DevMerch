@@ -10,7 +10,7 @@ function product(props) {
             <img className='product-image w-40' src={product.imageUrl||placeholderImage} alt='' />
             <p className='product-description'>{product.description}</p>
             <p className='price'>${product.price}</p>
-            <Link to={`/product/${111}`} className='product-button underline font-bold text-blue-800'>View</Link>
+            <Link to={`/product/${product._id}`} className='product-button underline font-bold text-blue-800'>View</Link>
         </div>
     </>);
 }
