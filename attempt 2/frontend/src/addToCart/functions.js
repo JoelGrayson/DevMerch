@@ -1,7 +1,7 @@
 function addToCart(id, quantity) { //adds, not overrides
     let storageId=`cartItem:${id}`;
     if (localStorage.getItem(storageId)==null) { //not previously defined
-        console.log(`Adding ${id} qty ${quantity}`);
+        console.log(`Adding ${id} with quantity ${quantity}`);
         localStorage.setItem(storageId, quantity);
     } else { //already exists (add to prevQuantity)
         let prevQuantity=parseInt(localStorage.getItem(storageId));
