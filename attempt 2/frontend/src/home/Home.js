@@ -1,5 +1,6 @@
 import Product from './component/Product'; //component
 import {CircularProgress} from '@mui/material';
+import joelWithSticker from './joel with sticker.jpg';
 
 //React
 import React from 'react';
@@ -31,7 +32,7 @@ function Home() {
             <h2 className='w-full flex justify-center my-10'><CircularProgress size={70} /></h2>
             :
             <div className="my-4 mx-auto max-w-[1300px]">
-                <h1 className='text-center p-10'>Latest Products</h1>
+                <h1 className='text-center p-10'>Stickers</h1>
                 <div className='grid mx-3' style={{gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem'}}> {/* product-container */}
                     {
                         products.map(product=>{ //show products
@@ -39,6 +40,11 @@ function Home() {
                         })
                     }
                 </div>
+                <hr className='my-16 border-t-2 border-solid border-gray-200'/>
+                <figure className='w-[300px] mx-auto'>
+                    <img src={joelWithSticker} alt="Joel with Sticker" />
+                    <figcaption className='text-center'>Joel coding this store with a nuclear energy sticker</figcaption>
+                </figure>
             </div>
         }
     </>)
