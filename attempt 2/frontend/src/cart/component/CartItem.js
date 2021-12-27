@@ -12,9 +12,11 @@ function CartItem(props) {
     let [productDetails, setProductDetails]=useState({});
 
     useEffect(_=>{
+        console.log(`http://localhost:1028/api/products/${id}`)
         fetch(`http://localhost:1028/api/products/${id}`)
         .then(res=>res.json())
         .then(json=>{
+            console.log(json);
             setProductDetails(json);
         })
     }, [id]); //no dependencies
@@ -26,7 +28,7 @@ function CartItem(props) {
         setQuantity(newQuantity); //updates virtual dom
     }
 
-    let productLink=`/product/${productDetails._id}`;
+    let productLink=`/product/${productDetails.id}`;
     
     return (
         <div className='cartItem flex items-center border-solid border-2 border-black rounded-lg p-3 my-5'>

@@ -7,7 +7,8 @@ const Product = require('./models/Product');
 connectDb();
 
 async function importData() {
-    try {
+    try { //clear previous data & import
+        localStorage.clear(); //removes previous localStorage items in cart
         await Product.deleteMany({});
         await Product.insertMany(productsData)
         console.log('Data import success')

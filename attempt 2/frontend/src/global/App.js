@@ -24,6 +24,7 @@ function App() {
                 <Route path='/product/:id' element={<Product/>}></Route>
                 {/* Delete for production. only for testing */} <Route path='/product/' element={<Product/>}></Route>
                 <Route path='/cart' element={<Cart/>}></Route>
+                <Route path='/img/' element={<Cart/>}></Route>
                 
                 {/* Other */}
                 <Route path='/about' element={<About/>}></Route>
