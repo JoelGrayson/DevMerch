@@ -1,4 +1,6 @@
+import apiUrlPrefix from '../apiUrlPrefix';
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import './style.css';
 
 import { useParams } from 'react-router-dom';
@@ -21,7 +23,7 @@ function Product() {
 
     async function getProductById(id) {
         setPageStatus('Loading');
-        let result=await fetch(`http://localhost:1028/api/products/${id}`);
+        let result=await fetch(`${apiUrlPrefix}api/products/${id}`);
         if (result.status===500) { //error fetching
             setPageStatus('Page not found');
             return;
@@ -35,11 +37,6 @@ function Product() {
     useEffect(() => {
         getProductById(idFromParams);
     }, [idFromParams]);
-
-    function addToCartButtonClick() {
-        addToCart(product._id, quantity);
-        window.location.href='/cart';
-    }
 
     return (<>
         {
@@ -66,7 +63,9 @@ function Product() {
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <button onClick={addToCartButtonClick}>Add to cart</button>
+                    <Link to='/cart' onClick={_=>addToCart(product._id, quantity)}> {/* Adds to cart before redirecting to /cart */}
+                        <button>Add to cart</button>
+                    </Link>
                 </div>
             </div>
         }</>);

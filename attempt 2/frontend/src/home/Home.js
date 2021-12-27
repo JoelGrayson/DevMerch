@@ -1,3 +1,4 @@
+import apiUrlPrefix from '../apiUrlPrefix';
 import Product from './component/Product'; //component
 import {CircularProgress} from '@mui/material';
 import joelWithSticker from './joel with sticker.jpg';
@@ -16,7 +17,7 @@ function Home() {
     
     async function fetchFunction() {
         try {
-            const data=await fetch('http://localhost:1028/api/products')
+            const data=await fetch(`${apiUrlPrefix}api/products`)
             const jsonData=await data.json();
             setProducts(jsonData);
             setLoading(false);

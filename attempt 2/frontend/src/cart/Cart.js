@@ -15,7 +15,7 @@ function Cart() {
             let total=0;
             for (let i=0; i<cartItems.length; i++) {
                 //Get price of item
-                let productUrl=`http://localhost:1028/api/products/${cartItems[i].id}`
+                let productUrl=`/api/products/${cartItems[i].id}`
                 let temp=await fetch(productUrl);
                 let json=await temp.json();
                 let price=json.price;
