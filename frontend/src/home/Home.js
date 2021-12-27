@@ -34,7 +34,7 @@ function Home() {
             :
             <div className="my-4 mx-auto max-w-[1300px]">
                 <h1 className='text-center p-10'>Stickers</h1>
-                <div className='grid mx-3' style={{gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem'}}> {/* product-container */}
+                <div className='grid mx-3 justify-items-center items-center' style={{gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem'}}> {/* product-container */}
                     {
                         products.map(product=>{ //show products
                             return <Product product={product} key={product._id} />
