@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d79acb30.css",
+    "main.js": "/static/js/main.d618c350.js",
+    "static/media/joel with sticker.jpg": "/static/media/joel with sticker.a31bf4947a4f11d8efd8.jpg",
+    "static/media/CartIcon.svg": "/static/media/CartIcon.709b51fc7d2762b0084fb1cea70b6429.svg",
+    "index.html": "/index.html",
+    "main.d79acb30.css.map": "/static/css/main.d79acb30.css.map",
+    "main.d618c350.js.map": "/static/js/main.d618c350.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d79acb30.css",
+    "static/js/main.d618c350.js"
+  ]
+}

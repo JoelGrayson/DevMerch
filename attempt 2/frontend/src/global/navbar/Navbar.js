@@ -33,7 +33,7 @@ function Navbar(props) {
                 </Link>
                 <Link to='/cart' className='j_header-btn'>
                     <img src={CartIcon} alt="Cart icon" className='h-12' />
-                    <p>Cart 
+                    <p>Cart&nbsp;
                         {numCartItems && <span id='cartCount' className='rounded-full px-2 py-1 border-solid border-black border-2'>{numCartItems}</span>}
                     </p>
                 </Link>
