@@ -6,6 +6,9 @@ import './CartItem.css';
 import {removeFromCart, changeQuantity} from '../../addToCart/functions';
 
 function CartItem(props) {
+
+    let [deleted, setDeleted]=useState(false);
+    
     let {id, quantity: ogQuantity}=props.itemDetails; //only includes id & quantity
     let [quantity, setQuantity]=useState(ogQuantity);
     //fetch product details
@@ -58,7 +61,7 @@ function CartItem(props) {
                     <option value="10">10</option>
                 </select>
             </div>
-            <button className='delete bg-red-500 hover:bg-red-600' onClick={_=>removeFromCart(id)}>
+            <button className='delete bg-red-500 hover:bg-red-600' onClick={_=>{removeFromCart(id); setDeleted(true)}}>
                 <i className='fas fa-trash'></i>
             </button>
         </div>
