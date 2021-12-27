@@ -14,7 +14,6 @@ app.use('/api/products', productRouter);
 //serves react app on any page
 let pages=['/', '/product/*', '/about', '/cart'] //pages to serve build/index.html
 for (let page of pages) {
-    console.log(page)
     app.get(page, (req, res)=>{
         res.sendFile(path.join(__dirname, 'build', 'index.html'));
     });

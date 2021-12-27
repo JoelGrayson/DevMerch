@@ -3,7 +3,7 @@ module.exports = [
     {
         name: 'React',
         imageUrl:
-            'https://i.ibb.co/CzRGmgR/1280px-React-icon-svg.png',
+            '/imgs/react.png',
         description:
             'Get developer style at with the React sticker.',
         price: 2.99,
@@ -12,7 +12,7 @@ module.exports = [
     {
         name: 'JavaScript',
         imageUrl:
-            'https://i.ibb.co/ZVK1Y9X/js.png',
+            '/imgs/js.png',
         description:
             'Get developer style at with the JavaScript sticker.',
         price: 1.99,
@@ -21,7 +21,7 @@ module.exports = [
     {
         name: 'CSS',
         imageUrl:
-            'https://i.ibb.co/bXrwky7/logo-2582747-1280.png',
+            '/imgs/css.png',
         description:
             'Get developer style at with the CSS sticker.',
         price: 1.99,
@@ -30,7 +30,7 @@ module.exports = [
     {
         name: 'MongoDB',
         imageUrl:
-            'https://i.ibb.co/Xzpkw4T/mongodb-logo.png',
+            '/imgs/mongodb.png',
         description:
             'Get developer style at with the MongoDB sticker.',
         price: 2.99,
@@ -39,7 +39,7 @@ module.exports = [
     {
         name: 'SQL',
         imageUrl:
-            'https://i.ibb.co/MSYr2WB/sql-database-icon-logo-design-ui-ux-app-orange-inscription-shadow-96841969.png',
+            '/imgs/sql.png',
         description:
             'Get developer style at with the SQL sticker.',
         price: 3.99,
@@ -47,7 +47,7 @@ module.exports = [
     },
     {
         name: 'Nuclear Trefoil',
-        imageUrl: 'https://i.ibb.co/7zKz2h7/trefoil.png',
+        imageUrl: '/imgs/trefoil.png',
         description: 'The sticker for nuclear enthusiasts.',
         price: 1.99,
         countInStock: 5
