@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "proxy": "http://localhost:1028",
   "scripts": {
     "start": "node backend/server.js",
     "//comment": " //executed in heroku/other server",

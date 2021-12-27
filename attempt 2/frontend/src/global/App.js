@@ -12,6 +12,7 @@ import Home from '../home/Home';
 import Product from '../product/Product';
 import Cart from '../cart/Cart';
 import About from '../about/About';
+import Checkout from '../checkout/Checkout';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
                 <Route path='/product/:id' element={<Product/>}></Route>
                 {/* Delete for production. only for testing */} <Route path='/product/' element={<Product/>}></Route>
                 <Route path='/cart' element={<Cart/>}></Route>
-                <Route path='/img/' element={<Cart/>}></Route>
+                <Route path='/checkout/' element={<Checkout/>}></Route>
                 
                 {/* Other */}
                 <Route path='/about' element={<About/>}></Route>
