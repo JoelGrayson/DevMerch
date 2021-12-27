@@ -1,4 +1,6 @@
-# Dev Merch
+# [Dev Merch](https://developer-merch.herokuapp.com/)
+https://developer-merch.herokuapp.com/
+
 ### About
 Developer merch is an online store where you can buy stickers of your favorite technologies.
 
