@@ -3,7 +3,7 @@ const express=require('express');
 const app=express();
 const path=require('path');
 
-let connectDb=require('./config/db');
+let connectDb=require('./mongoDb/config/connect');
 connectDb();
 
 app.use(express.static(path.join(__dirname, 'public'))); //public folder

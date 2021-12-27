@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "//comment": " //executed in heroku/other server",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data-import": "node backend/middle.js"
+    "reset-data": "node backend/mongodb/config/reset",
+    "//comment": " //npm start executed in heroku/other server",
+    "dev_server": "nodemon backend/server.js",
+    "dev_client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run dev_server\" \"npm run dev_client\""
   },
   "repository": {
     "type": "git",

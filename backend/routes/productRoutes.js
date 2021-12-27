@@ -1,10 +1,10 @@
 const router=require('express').Router();
-const Product = require('../models/Product');
+const ProductModel = require('../mongodb/data/productModel');
 
 // GET /api/products/ -> Get all products
 router.get('/', async (req, res, next) => { //get all products
     try {
-        const products = await Product.find();
+        const products = await ProductModel.find();
         res.json(products);
     } catch (err) {
         console.error(err);
@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => { //get all products
 router.get('/:id', async (req, res) => { //getProductById
     try {
         let idFromParams=req.params.id;
-        const product = await Product.findById(idFromParams);
+        const product = await ProductModel.findById(idFromParams);
         res.json(product);
     } catch (err) {
         console.error(err);
