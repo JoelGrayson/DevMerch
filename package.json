@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
+    "build": "cd frontend && npm run build-and-copy",
     "reset-data": "node backend/mongodb/config/reset",
-    "//comment": " //npm start executed in heroku/other server",
+
     "dev_server": "nodemon backend/server.js",
     "dev_client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run dev_server\" \"npm run dev_client\""
