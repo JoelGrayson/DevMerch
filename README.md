@@ -1,5 +1,5 @@
-# [Developer Merch](https://developer-merch.vercel.app)
-https://developer-merch.vercel.app
+# [Developer Merch](https://developer-merch.joelgrayson.com)
+[developer-merch.joelgrayson.com](https://developer-merch.joelgrayson.com)
 
 ### About
 Developer merch is an online store where you can buy stickers of your favorite technologies.
