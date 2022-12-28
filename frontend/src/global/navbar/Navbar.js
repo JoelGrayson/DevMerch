@@ -24,7 +24,7 @@ function Navbar(props) {
         <nav className='w-full bg-gradient-to-br from-[#9663c9] to-[#476dc1] flex justify-between items-center p-3 text-[#9CE2F9]'>
             <div> {/* Left side */}
                 <Link to='/'> {/* Logo */}
-                    <p className='text-2xl px-5 py-2 border-solid border-2 border-[#641260] bg-[#8128C2] rounded-lg'><b>Dev</b> Merch</p>
+                    <p className='text-2xl px-5 py-2 border-solid border-2 border-[#641260] bg-[#8128C2] rounded-lg'><b>Developer</b> Merch</p>
                 </Link>
             </div>
             <div className='flex p-3 space-x-4'> {/* Right side */}

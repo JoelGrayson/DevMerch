@@ -1,4 +1,4 @@
-# [Dev Merch](https://developer-merch.herokuapp.com/)
+# [Developer Merch](https://developer-merch.herokuapp.com/)
 https://developer-merch.herokuapp.com/
 
 ### About
